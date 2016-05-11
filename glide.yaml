@@ -1,0 +1,8 @@
+package: github.com/jsio-private/docker-volume-glusterfs
+import:
+- package: github.com/calavera/docker-volume-glusterfs
+  subpackages:
+  - rest
+- package: github.com/docker/go-plugins-helpers
+  subpackages:
+  - volume

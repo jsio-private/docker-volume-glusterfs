@@ -13,7 +13,7 @@ import (
 const glusterfsID = "_glusterfs"
 
 var (
-	defaultDir  = filepath.Join(volume.DefaultDockerRootDirectory, glusterfsID)
+	defaultDir  = filepath.Join("host", volume.DefaultDockerRootDirectory, glusterfsID)
 	serversList = flag.String("servers", "", "List of glusterfs servers")
 	restAddress = flag.String("rest", "", "URL to glusterfsrest api")
 	gfsBase     = flag.String("gfs-base", "/mnt/gfs", "Base directory where volumes are created in the cluster")

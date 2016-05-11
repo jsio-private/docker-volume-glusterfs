@@ -1,0 +1,31 @@
+FROM golang
+MAINTAINER Joe Brown <jbrown@weeby.co>
+# Original: https://github.com/thinkernel/docker-volume-glusterfs
+
+# RUN apt-get update && apt-get -y install software-properties-common
+
+# RUN add-apt-repository ppa:gluster/glusterfs-3.7
+RUN apt-get update && apt-get -y install --force-yes \
+  glusterfs-client
+
+
+ENV GO15VENDOREXPERIMENT 1
+RUN git clone https://github.com/Masterminds/glide /go/src/github.com/Masterminds/glide
+RUN cd /go/src/github.com/Masterminds/glide && \
+  make install
+
+RUN go get github.com/rancher/trash
+
+
+RUN git clone https://github.com/${ORIGIN_PATH} /go/src/github.com/${ORIGIN_PATH}
+RUN cd /go/src/github.com/${ORIGIN_PATH} && \
+  glide install && /
+  go install
+
+WORKDIR /go/src/github.com/${ORIGIN_PATH}
+
+EXPOSE 7878
+ADD launch.sh /launch.sh
+
+# ENTRYPOINT ["launch.sh"]
+# CMD ["-help"]

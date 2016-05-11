@@ -1,0 +1,50 @@
+hash: 1dc887675facf043d00834b9a8890c77d7c5025d01ec1ef36f8d16d3e6c8be20
+updated: 2016-05-11T20:27:38.583797639Z
+imports:
+- name: github.com/calavera/docker-volume-glusterfs
+  version: 0ccf2d59b0db7bad7b5bb661e43bdca65518c9e4
+  subpackages:
+  - rest
+- name: github.com/coreos/go-systemd
+  version: f0fc421064ab8f21a16c102f78c3140d361d7c7e
+  subpackages:
+  - activation
+  - util
+- name: github.com/docker/distribution
+  version: e69f10892435aa7053170193aaab1593a6c0a671
+  subpackages:
+  - registry/api/errcode
+- name: github.com/docker/docker
+  version: 20f81dde9bd97c86b2d0e33bbbf1388018611929
+  subpackages:
+  - volume
+  - errors
+  - pkg/system
+- name: github.com/docker/go-connections
+  version: 5b7154ba2efe13ff86ae8830a9e7cb120b080d6e
+  subpackages:
+  - sockets
+- name: github.com/docker/go-plugins-helpers
+  version: f0fe1a917b167f0e0cebd0fa1ecc5f1342e940ac
+  subpackages:
+  - volume
+  - sdk
+- name: github.com/docker/go-units
+  version: 5d2041e26a699eaca682e2ea41c8f891e1060444
+- name: github.com/Microsoft/go-winio
+  version: 3b8b3c98b207f95fe0cd6c7c311a9ac497ba7c0f
+- name: github.com/opencontainers/runc
+  version: c6a791bef906b0dfdf81e85b840bec475b8ec75e
+  subpackages:
+  - libcontainer/user
+- name: github.com/Sirupsen/logrus
+  version: cd7d1bbe41066b6c1f19780f895901052150a575
+- name: golang.org/x/net
+  version: 96dbb961a39ddccf16860cdd355bfa639c497f23
+  subpackages:
+  - proxy
+- name: golang.org/x/sys
+  version: 806cb00533e5af545ce95e84b349404f8e5ff7a8
+  subpackages:
+  - unix
+devImports: []
